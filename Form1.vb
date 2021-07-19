@@ -1,7 +1,7 @@
 ﻿Public Class Form1
 
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) 
+    Private Sub btnExit_Click(sender As Object, e As EventArgs)
         Dim iExit As DialogResult
         iExit = MessageBox.Show("comfirm if you want to exit", "Stock Control", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
@@ -26,64 +26,67 @@
         cmbAccountType.Items.Add("Customer Account")
 
         cmbVAT.Items.Add("Yes")
-        cmbVAT.Items.Add("NO")
 
-        cmbProductID.Items.Add("PIDOO1")
-        cmbProductID.Items.Add("PID012")
-        cmbProductID.Items.Add("PIDO13")
-        cmbProductID.Items.Add("PIDO14")
-        cmbProductID.Items.Add("PIDO15")
 
-        cmbNoSale.Items.Add("Yes")
-        cmbNoSale.Items.Add("No")
+        cmbProductID.Items.Add("Rice")
+        cmbProductID.Items.Add("Beans")
+        cmbProductID.Items.Add("Carrot")
+        cmbProductID.Items.Add("Bread")
+        cmbProductID.Items.Add("Eggs")
+        cmbProductID.Items.Add("Apple")
+
 
         For q = 18 To 28
             cmbOrderID.Items.Add("OrID" & q)
             cmbCustomerID.Items.Add("CID002" & q)
 
-        Next
-        For d = 0 To 25 Step 5
-            cmbDiscount.Items.Add(d)
 
         Next
     End Sub
 
     Private Sub cmbProductID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProductID.SelectedIndexChanged
-        If cmbProductID.Text = "PIDOO1" Then
-            txtProduct.Text = "Rice"
+        If cmbProductID.Text = "Rice" Then
+            txtProduct.Text = "PIDOO1"
             txtDescription.Text = "White Seed"
             txtStockLevel.Text = "200"
-            lblReOrderLevel.Text = "50"
+            lblReOrderLevel.Text = "Order more stock"
             lblOutofStock.Text = "2"
             txtCost.Text = "20"
-        ElseIf cmbProductID.Text = "PIDO12" Then
-            txtProduct.Text = "Beans"
+        ElseIf cmbProductID.Text = "Beans" Then
+            txtProduct.Text = "PIDO12"
             txtDescription.Text = "White Seed eye"
             txtStockLevel.Text = "120"
-            lblReOrderLevel.Text = "10"
+            lblReOrderLevel.Text = "Order more stock"
             lblOutofStock.Text = "2"
             txtCost.Text = "17"
-        ElseIf cmbProductID.Text = "PIDO13" Then
-            txtProduct.Text = "Carrot"
+        ElseIf cmbProductID.Text = "Carrot" Then
+            txtProduct.Text = "PIDO13"
             txtDescription.Text = "Vegetable"
             txtStockLevel.Text = "150"
-            lblReOrderLevel.Text = "15"
+            lblReOrderLevel.Text = "Order more stock"
             lblOutofStock.Text = "2"
             txtCost.Text = "3"
-        ElseIf cmbProductID.Text = "PIDO14" Then
-            txtProduct.Text = "Bread"
+        ElseIf cmbProductID.Text = "Bread" Then
+            txtProduct.Text = "PIDO14"
             txtDescription.Text = "Flour/ Grain"
             txtStockLevel.Text = "400"
-            lblReOrderLevel.Text = "100"
+            lblReOrderLevel.Text = "Order more stock"
             lblOutofStock.Text = "2"
             txtCost.Text = "1.5"
-        ElseIf cmbProductID.Text = "PIDO15" Then
-            txtProduct.Text = "Eggs"
+        ElseIf cmbProductID.Text = "Eggs" Then
+            txtProduct.Text = "PIDO15"
             txtDescription.Text = "Poultry"
             txtStockLevel.Text = "500"
-            lblReOrderLevel.Text = "150"
+            lblReOrderLevel.Text = "Order more stock"
             lblOutofStock.Text = "2"
             txtCost.Text = "1.34"
+        ElseIf cmbProductID.Text = "Apple" Then
+            txtProduct.Text = "PIDO16"
+            txtDescription.Text = "Fruits"
+            txtStockLevel.Text = "120"
+            lblReOrderLevel.Text = "Order more stock"
+            lblOutofStock.Text = "2"
+            txtCost.Text = "3.00"
 
         End If
     End Sub
@@ -93,6 +96,7 @@
     End Sub
 
     Private Sub Form1_formClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        btnExit.PerformClick()
 
     End Sub
 
@@ -101,15 +105,16 @@
 
         lblReminder.Text = Val(txtStockLevel.Text) - Val(txtNoOrder.Text)
 
-        If (lblReminder.Text = 2) Then
-            lblAction.Text = "Order more product "
+        If (lblReminder.Text <= 2) Then
+            MsgBox("More order requested", MsgBoxStyle.Information, "Order messege")
+
         Else
-            lblAction.Text = "No order requested "
+            lblAction.Text = "No order requested"
         End If
     End Sub
 
     Private Sub txtProduct_TextChanged(sender As Object, e As EventArgs) Handles txtProduct.TextChanged
-        lblItemOrder.Text = txtProduct.Text
+        lblItemOrder.Text = cmbProductID.Text
 
     End Sub
 
@@ -122,29 +127,43 @@
     Private Sub btnTotal_Click(sender As Object, e As EventArgs) Handles btnTotal.Click
         Dim iTax As Decimal
 
-        If cmbDiscount.Text = 0 Then
+        iTax = ((Val(txtCost.Text) * Val(txtNoOrder.Text)) / 100 * 7.5)
+        lblTax.Text = iTax
+        lblSubTotal.Text = Val(txtCost.Text) * Val(txtNoOrder.Text)
 
 
-
-            iTax = ((Val(txtCost.Text) * Val(txtNoOrder.Text) * 7.5) / 100)
-            lblTax.Text = iTax
-            lblSubTotal.Text = Val(txtCost.Text) * Val(txtNoOrder.Text)
+        lblTotal.Text = (Val(lblSubTotal.Text) + Val(lblTax.Text))
 
 
-            lblTotal.Text = Val(lblSubTotal.Text) + (iTax)
-
-        ElseIf cmbDiscount.Text = 5 Then
-
-            iTax = ((Val(txtCost.Text) * Val(txtNoOrder.Text) * 7.5) / 100)
-            lblTax.Text = iTax
-            lblSubTotal.Text = Val(txtCost.Text) * Val(txtNoOrder.Text)
-
-
-            lblTotal.Text = Val(lblSubTotal.Text) + (iTax)
-
-        End If
         lblTax.Text = FormatCurrency(lblTax.Text)
         lblSubTotal.Text = FormatCurrency(lblSubTotal.Text)
         lblTotal.Text = FormatCurrency(lblTotal.Text)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        txtCost.Text = ""
+        lblTax.Text = ""
+        lblSubTotal.Text = ""
+        lblTotal.Text = ""
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtCost.Text = ""
+        lblTax.Text = ""
+        lblSubTotal.Text = ""
+        lblTotal.Text = ""
+        cmbCustomerID.Text = "0"
+    End Sub
+
+    Private Sub cmbPaymentMethod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPaymentMethod.SelectedIndexChanged
+        If cmbPaymentMethod.Text = "Cash" Then
+            cmbAccountType.Text = "Pay "
+        Else
+            cmbAccountType.Text = "Account type "
+        End If
+    End Sub
+
+
 End Class

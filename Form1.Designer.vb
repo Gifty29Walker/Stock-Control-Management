@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,11 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblReminder = New System.Windows.Forms.TextBox()
-        Me.cmbNoSale = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.txtCost = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.lblReOrderLevel = New System.Windows.Forms.TextBox()
@@ -43,7 +42,6 @@ Partial Class Form1
         Me.txtStockLevel = New System.Windows.Forms.TextBox()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.txtProduct = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -76,7 +74,7 @@ Partial Class Form1
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnTotal = New System.Windows.Forms.Button()
@@ -86,8 +84,6 @@ Partial Class Form1
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.cmbDiscount = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -97,8 +93,6 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.lblReminder)
-        Me.GroupBox1.Controls.Add(Me.cmbNoSale)
-        Me.GroupBox1.Controls.Add(Me.Label20)
         Me.GroupBox1.Controls.Add(Me.txtCost)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.lblReOrderLevel)
@@ -116,7 +110,6 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.txtStockLevel)
         Me.GroupBox1.Controls.Add(Me.txtDescription)
         Me.GroupBox1.Controls.Add(Me.txtProduct)
-        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -128,42 +121,24 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1218, 470)
+        Me.GroupBox1.Size = New System.Drawing.Size(1218, 427)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Stock Control"
         '
         'lblReminder
         '
-        Me.lblReminder.Location = New System.Drawing.Point(567, 71)
+        Me.lblReminder.Location = New System.Drawing.Point(468, 71)
         Me.lblReminder.Name = "lblReminder"
         Me.lblReminder.Size = New System.Drawing.Size(165, 24)
         Me.lblReminder.TabIndex = 46
         '
-        'cmbNoSale
-        '
-        Me.cmbNoSale.FormattingEnabled = True
-        Me.cmbNoSale.Location = New System.Drawing.Point(875, 70)
-        Me.cmbNoSale.Name = "cmbNoSale"
-        Me.cmbNoSale.Size = New System.Drawing.Size(165, 26)
-        Me.cmbNoSale.TabIndex = 33
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(758, 78)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(68, 18)
-        Me.Label20.TabIndex = 34
-        Me.Label20.Text = "On Sale"
-        '
         'txtCost
         '
-        Me.txtCost.Location = New System.Drawing.Point(272, 280)
+        Me.txtCost.Location = New System.Drawing.Point(272, 297)
         Me.txtCost.Multiline = True
         Me.txtCost.Name = "txtCost"
-        Me.txtCost.Size = New System.Drawing.Size(60, 37)
+        Me.txtCost.Size = New System.Drawing.Size(60, 20)
         Me.txtCost.TabIndex = 33
         '
         'Label16
@@ -197,13 +172,13 @@ Partial Class Form1
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(6, 35)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(93, 18)
+        Me.Label15.Size = New System.Drawing.Size(116, 18)
         Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Product  ID"
+        Me.Label15.Text = "Product Name"
         '
         'DateTimePicker4
         '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(875, 35)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(821, 29)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(165, 24)
         Me.DateTimePicker4.TabIndex = 26
@@ -212,7 +187,7 @@ Partial Class Form1
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(757, 30)
+        Me.Label11.Location = New System.Drawing.Point(685, 32)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(104, 18)
         Me.Label11.TabIndex = 25
@@ -222,7 +197,7 @@ Partial Class Form1
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(425, 69)
+        Me.Label10.Location = New System.Drawing.Point(349, 71)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(89, 18)
         Me.Label10.TabIndex = 23
@@ -230,7 +205,7 @@ Partial Class Form1
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(567, 33)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(468, 30)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(165, 24)
         Me.DateTimePicker2.TabIndex = 22
@@ -239,7 +214,7 @@ Partial Class Form1
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(425, 30)
+        Me.Label9.Location = New System.Drawing.Point(349, 29)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(89, 18)
         Me.Label9.TabIndex = 21
@@ -247,24 +222,25 @@ Partial Class Form1
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(143, 402)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(137, 347)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(165, 24)
         Me.DateTimePicker1.TabIndex = 20
         '
         'txtNoOrder
         '
-        Me.txtNoOrder.Location = New System.Drawing.Point(143, 280)
+        Me.txtNoOrder.Location = New System.Drawing.Point(143, 297)
         Me.txtNoOrder.Multiline = True
         Me.txtNoOrder.Name = "txtNoOrder"
-        Me.txtNoOrder.Size = New System.Drawing.Size(60, 37)
+        Me.txtNoOrder.Size = New System.Drawing.Size(60, 20)
         Me.txtNoOrder.TabIndex = 19
         '
         'lblAction
         '
-        Me.lblAction.Location = New System.Drawing.Point(143, 350)
+        Me.lblAction.Location = New System.Drawing.Point(143, 357)
+        Me.lblAction.Multiline = True
         Me.lblAction.Name = "lblAction"
-        Me.lblAction.Size = New System.Drawing.Size(165, 24)
+        Me.lblAction.Size = New System.Drawing.Size(10, 10)
         Me.lblAction.TabIndex = 18
         '
         'lblOutofStock
@@ -298,21 +274,11 @@ Partial Class Form1
         Me.txtProduct.Size = New System.Drawing.Size(105, 27)
         Me.txtProduct.TabIndex = 11
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(9, 353)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 18)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Action"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 303)
+        Me.Label8.Location = New System.Drawing.Point(10, 300)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(103, 18)
         Me.Label8.TabIndex = 9
@@ -342,7 +308,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 402)
+        Me.Label3.Location = New System.Drawing.Point(6, 353)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 18)
         Me.Label3.TabIndex = 6
@@ -374,9 +340,9 @@ Partial Class Form1
         Me.txtProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProductName.Location = New System.Drawing.Point(6, 77)
         Me.txtProductName.Name = "txtProductName"
-        Me.txtProductName.Size = New System.Drawing.Size(116, 18)
+        Me.txtProductName.Size = New System.Drawing.Size(88, 18)
         Me.txtProductName.TabIndex = 3
-        Me.txtProductName.Text = "Product Name"
+        Me.txtProductName.Text = "Product ID"
         '
         'GroupBox3
         '
@@ -398,9 +364,9 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(430, 109)
+        Me.GroupBox3.Location = New System.Drawing.Point(352, 101)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(760, 326)
+        Me.GroupBox3.Size = New System.Drawing.Size(686, 326)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Customer Order"
@@ -615,7 +581,7 @@ Partial Class Form1
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Controls.Add(Me.btnExit)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.btnTotal)
@@ -625,26 +591,24 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label19)
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.cmbDiscount)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 488)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 445)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(1218, 161)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
-        'Button4
+        'btnExit
         '
-        Me.Button4.Location = New System.Drawing.Point(864, 105)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 41)
-        Me.Button4.TabIndex = 40
-        Me.Button4.Text = "Exit"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnExit.Location = New System.Drawing.Point(864, 83)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 41)
+        Me.btnExit.TabIndex = 40
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(679, 105)
+        Me.Button3.Location = New System.Drawing.Point(679, 83)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 41)
         Me.Button3.TabIndex = 39
@@ -653,7 +617,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(446, 105)
+        Me.Button2.Location = New System.Drawing.Point(445, 83)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(101, 41)
         Me.Button2.TabIndex = 38
@@ -662,7 +626,7 @@ Partial Class Form1
         '
         'btnTotal
         '
-        Me.btnTotal.Location = New System.Drawing.Point(124, 105)
+        Me.btnTotal.Location = New System.Drawing.Point(130, 83)
         Me.btnTotal.Name = "btnTotal"
         Me.btnTotal.Size = New System.Drawing.Size(124, 41)
         Me.btnTotal.TabIndex = 37
@@ -671,7 +635,8 @@ Partial Class Form1
         '
         'lblSubTotal
         '
-        Me.lblSubTotal.Location = New System.Drawing.Point(798, 21)
+        Me.lblSubTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubTotal.Location = New System.Drawing.Point(546, 24)
         Me.lblSubTotal.Multiline = True
         Me.lblSubTotal.Name = "lblSubTotal"
         Me.lblSubTotal.Size = New System.Drawing.Size(113, 20)
@@ -679,23 +644,25 @@ Partial Class Form1
         '
         'lblTotal
         '
-        Me.lblTotal.Location = New System.Drawing.Point(1018, 21)
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(864, 26)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(111, 20)
+        Me.lblTotal.Size = New System.Drawing.Size(111, 22)
         Me.lblTotal.TabIndex = 35
         '
         'lblTax
         '
-        Me.lblTax.Location = New System.Drawing.Point(446, 25)
+        Me.lblTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTax.Location = New System.Drawing.Point(143, 20)
         Me.lblTax.Name = "lblTax"
-        Me.lblTax.Size = New System.Drawing.Size(123, 20)
+        Me.lblTax.Size = New System.Drawing.Size(123, 22)
         Me.lblTax.TabIndex = 34
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(405, 24)
+        Me.Label19.Location = New System.Drawing.Point(87, 22)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(35, 18)
         Me.Label19.TabIndex = 33
@@ -705,7 +672,7 @@ Partial Class Form1
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(714, 24)
+        Me.Label18.Location = New System.Drawing.Point(430, 25)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 18)
         Me.Label18.TabIndex = 32
@@ -715,40 +682,23 @@ Partial Class Form1
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(966, 24)
+        Me.Label17.Location = New System.Drawing.Point(776, 26)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(46, 18)
         Me.Label17.TabIndex = 31
         Me.Label17.Text = "Total"
         '
-        'cmbDiscount
-        '
-        Me.cmbDiscount.FormattingEnabled = True
-        Me.cmbDiscount.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.cmbDiscount.Location = New System.Drawing.Point(124, 21)
-        Me.cmbDiscount.Name = "cmbDiscount"
-        Me.cmbDiscount.Size = New System.Drawing.Size(165, 21)
-        Me.cmbDiscount.TabIndex = 30
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(8, 16)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(91, 48)
-        Me.Label14.TabIndex = 29
-        Me.Label14.Text = "Invoice" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Discount"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1352, 661)
+        Me.ClientSize = New System.Drawing.Size(804, 565)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Setup"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -780,20 +730,17 @@ Partial Class Form1
     Friend WithEvents txtStockLevel As TextBox
     Friend WithEvents txtDescription As TextBox
     Friend WithEvents txtProduct As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents cmbDiscount As ComboBox
-    Friend WithEvents Label14 As Label
     Friend WithEvents txtCost As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents cmbProductID As ComboBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnExit As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btnTotal As Button
@@ -803,8 +750,6 @@ Partial Class Form1
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents cmbNoSale As ComboBox
-    Friend WithEvents Label20 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents TextBox8 As TextBox
