@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Stock Control Management", "Stock Control Management.vbproj", "{854FD619-418D-4728-B9F6-2A7CDF9D9303}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{FCC2C12B-B4ED-4B0B-9B9B-B15099211172}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{56FE44D6-13F5-4B5C-9330-633AC9C64AEE}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gifty", "..\Gifty\Gifty.vdproj", "{A42FB567-E285-4690-94DF-C6CEF6716446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,8 @@ Global
 		{854FD619-418D-4728-B9F6-2A7CDF9D9303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854FD619-418D-4728-B9F6-2A7CDF9D9303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{854FD619-418D-4728-B9F6-2A7CDF9D9303}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FCC2C12B-B4ED-4B0B-9B9B-B15099211172}.Debug|Any CPU.ActiveCfg = Debug
-		{FCC2C12B-B4ED-4B0B-9B9B-B15099211172}.Release|Any CPU.ActiveCfg = Release
-		{56FE44D6-13F5-4B5C-9330-633AC9C64AEE}.Debug|Any CPU.ActiveCfg = Debug
-		{56FE44D6-13F5-4B5C-9330-633AC9C64AEE}.Release|Any CPU.ActiveCfg = Release
+		{A42FB567-E285-4690-94DF-C6CEF6716446}.Debug|Any CPU.ActiveCfg = Debug
+		{A42FB567-E285-4690-94DF-C6CEF6716446}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
